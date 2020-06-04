@@ -1,0 +1,6 @@
+- Variables (var, let, const)
+- Tipos de datos
+- Operadores
+- Repaso de funciones
+- Condicionales
+- Arrays
