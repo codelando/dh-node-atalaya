@@ -1,6 +1,13 @@
 - Variables (var, let, const)
 - Tipos de datos
+    - numero, string, booleano, array, objeto literal
+    - NaN, null, undefined
 - Operadores
-- Repaso de funciones
+    - Asignacion
+    - Aritméticos
+    - Comparación
+    - Lógicos
+- Funciones
 - Condicionales
 - Arrays
+    - push, pop, shift, unshift, indexOf, includes, find
