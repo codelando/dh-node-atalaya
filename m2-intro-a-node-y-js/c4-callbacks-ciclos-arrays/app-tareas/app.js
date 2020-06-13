@@ -1,27 +1,30 @@
-const fs = require('fs');
-const tareasJson = fs.readFileSync('./tareas.json', 'utf-8');
-const tareas = JSON.parse(tareasJson);
+const tareas = require('./tareas');
 
 // process.argv
-// Trae todos los parámetros
+// Trae todos los parámetros con los que se ejecutó el programa
 
 let accion = process.argv[2];
+let parametros = process.argv.slice(3);
 
 switch (accion) {
     // Si ponemos más de un caso, todos ejecutan el código del último de la lista
     case undefined:
     case 'todas':
-        tareas.forEach(element => {
-            console.log(element.titulo, '(' +  element.estado + ')');
-        });
+        tareas.todas();
         break;
+
     case 'pendientes':
-        let tareasFiltradas = tareas.filter(elem => elem.estado == 'pendiente');
-        tareasFiltradas.forEach(element => {
-            console.log(element.titulo,  '(' +  element.estado + ')');
-        });
+        tareas.pendientes();
         break;
-    // default ataja cualquier otro caso (similar al *else* que usamos en el *if*)
+
+    case 'crear':
+        tareas.crear(parametros[0], parametros[1])
+        break;
+ 
+    case 'borrar':
+        tareas.borrar(parametros[0])
+        break;
+
     default:
         console.log();
         console.log('No entiendo esa acción');
