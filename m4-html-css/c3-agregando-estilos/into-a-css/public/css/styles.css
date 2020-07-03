@@ -2,6 +2,13 @@ body {
     background-color: lightcyan;
 }
 
+
+p {
+    /* La propiedad font va intentar cargar cada fuente, y va a dejar la primera que exista */
+    /* serif y sans-serif son grupos de fuentes osea que se usará cualquiera que coincida */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #secondary-title {
     color: magenta;
 }
@@ -35,3 +42,4 @@ div ul li {
 p span {
     color: coral;
 }
+
