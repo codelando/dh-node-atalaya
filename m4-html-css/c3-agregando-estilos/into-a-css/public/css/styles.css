@@ -1,0 +1,37 @@
+body {
+    background-color: lightcyan;
+}
+
+#secondary-title {
+    color: magenta;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+/* Para combinar selectores, los escribimos uno junto al otro */
+.important.underlined {}
+
+h2.important {
+    color: red;
+}
+
+.important {
+    color: seagreen;
+    font-weight: bold;
+}
+
+h2.important {
+    color: turquoise;
+}
+
+/* Los selectores descendentes se escriben separados por un espacio*/
+
+div ul li {
+    color: brown;
+}
+
+p span {
+    color: coral;
+}

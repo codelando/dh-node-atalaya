@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a CSS</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Estilo en el documento -->
+    <!-- No se recomienda usarlo -->
+    <style>
+        h1 { color: tomato }
+    </style>
+
+    <!-- Estilo en línea, aplica solo a este elemento -->
+    <!-- No se recomienda usarlo -->
+    <h1 style="color: tomato">Introducción a CSS</h1>
+
+    <h2 id="secondary-title" class="underlined">Introducción a CSS</h2>
+
+    <h2 class="important">Otro titular</h2>
+
+    <!-- El <span></span> es un elemento de linea que nos permite separar contenido -->
+    <p>Lorem ipsum dolor sit amet <span class="underlined"> consectetur adipisicing elit.</span> Qui harum sed voluptate tempore atque obcaecati omnis magnam velit veritatis modi dolore quidem expedita architecto, aliquid amet incidunt ullam nemo necessitatibus!</p>
+
+    <!-- Si queremos agregar más de una clase, lo hacemos separadas por un espacio -->
+    <p class="important underlined">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum sed voluptate tempore atque <span>obcaecati omnis magnam velit</span> veritatis modi dolore <abbr title="Cascading Style Sheets">CSS</abbr> quidem expedita architecto, <em>aliquid amet incidunt</em> ullam nemo necessitatibus!</p>
+
+    <!-- El <div></div> es un elemento de bloque que nos permite separar contenido -->
+    <div>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+            <li>Elemento 4</li>
+            <li>Elemento 5</li>
+        </ul>
+    </div>
+    
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+</body>
+</html>
