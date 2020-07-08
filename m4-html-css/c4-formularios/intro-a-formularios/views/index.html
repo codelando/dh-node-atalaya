@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a formularios</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Bienvenidas/os a Ozom Market</h1>
+    </div>
+
+    <div class="main">
+        
+        <div class="form">
+
+            <!-- Por defecto action es la misma url donde estamos parados -->
+            <!-- HTML solo soporta de manera nativa GET y POST -->
+            
+            <form method="POST">
+                <h2>Formulario de registro</h2>
+                <p>Queremos pedirte algunos datos para poder registrarte. No nos tardamos nada 😉.</p>
+
+                <p>
+                    <label for="name">Nombre Completo:</lael><br>
+                    <input type="text" name="name" id="name" placeholder="Nombre Completo">
+                </p>
+        
+                <p>
+                    <label for="name">Email:</label><br>
+                    <input type="email" name="email" id="email">
+                </p>
+        
+                <p>
+                    <label for="name">Contraseña:</label><br>
+                    <input type="password" name="password" id="password">
+                </p>
+        
+        
+                <p>
+                    <label for="userType">¿Qué tipo de usuario sos?</label><br>
+                    <select name="userType" id="productCategory">
+                        <option value="">Seleccioná una opción</option>
+                        <option value="1">Consumidor final</option>
+                        <option value="2">Monotributista</option>
+                        <option value="3">Parte de una PyME</option>
+                        <option value="4">Parte de una empresa Grande</option>
+                        <option value="5" selected>Un unicornio 🦄</option>
+                    </select>
+        
+                </p>
+        
+                <p>
+                    <label for="name">¿Cuál va a ser tu actividad principal?</label><br>
+        
+                    <input type="radio" name="mainActivity" id="mainActivityBuyer" value="buyer">
+                    <label for="mainActivityBuyer">Comprar</label>
+                    <br>
+        
+                    <input type="radio" name="mainActivity" id="mainActivityseller" value="seller">
+                    <label for="mainActivityseller">Vender</label>
+                    <br>
+                    
+                </p>
+        
+                <p>
+                    <label for="productCategory">¿Cuáles son las categorías que más te interesan?</label><br>
+                
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesTech" value="tech">
+                        <label for="productCategoriesTech">Tecnología</label>
+                    </p>
+        
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesHome" value="home">
+                        <label for="productCategoriesHome">Hogar</label>
+                    </p>
+        
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesTools" value="tools" checked>
+                        <label for="productCategoriesTools">Herramientas</label>
+                    </p>
+        
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesToys" value="toys">
+                        <label for="productCategoriesToys">Juguetes</label>
+                    </p>
+        
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesSports" value="sports">
+                        <label for="productCategoriesSports">Deportes</label>
+                    </p>
+        
+                    <p>
+                        <input type="checkbox" name="productCategories" id="productCategoriesBooks" value="books">
+                        <label for="productCategoriesBooks">Libros</label>
+                    </p>
+        
+                </p>
+        
+                <p>
+                    <button class="button button-reset" type="reset">Empezar de nuevo</button>
+                    <button class="button button-submit" type="submit">Registrarme</button>
+                </p>
+            </form>
+        </div>
+    </div>  
+</body>
+</html>

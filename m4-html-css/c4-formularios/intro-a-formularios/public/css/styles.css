@@ -1,0 +1,45 @@
+/* https://coolors.co/334139-1e2d24-c52184-00bfb2-f9b4ed */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F9B4ED;
+}
+
+.header {
+    overflow: auto;
+    background-color: #C52184;
+    color: white;
+    text-align: center;
+}
+
+.form {
+    background-color: #1E2D24;
+    color: white;
+    width: 480px;
+    margin: 32px auto;
+}
+
+.form form {
+    overflow: auto;
+    margin: 32px;
+}
+
+.form p label {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.button {
+    border: 0;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.button-reset { background-color: #C52184; }
+.button-reset:hover { background-color: #E151A7; }
+
+.button-submit { background-color: #00BFB2; }
+.button-submit:hover { background-color: #00F5E4; }
