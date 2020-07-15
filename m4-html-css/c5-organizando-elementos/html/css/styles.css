@@ -1,0 +1,99 @@
+/* https://coolors.co/482728-7e4e60-e7dae2-fe5f55-19647e */
+
+
+/* Variables */
+/* Por lo general son cosas que queremos implementar en varios elementos */
+
+:root {
+    --default-padding: 36px;
+}
+
+/* Estilos generales */
+
+* { box-sizing: border-box; }
+
+a { text-decoration: none; }
+
+h1 { 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+body { 
+    margin: 0; 
+    font-family: sans-serif;
+}
+
+/* Estilos de las secciones del sitio */
+header, 
+footer {
+    background-color: #482728;
+    padding: var(--default-padding);
+    text-align: center;
+}
+
+main {
+    padding: var(--default-padding);;
+}
+
+header nav a, 
+footer nav a {
+    padding: 6px 12px;
+    margin-right: 12px;
+    background-color: #E7DAE2;
+    color: #333;
+    border-radius: 18px;
+    border-bottom: 6px solid #FE5F55;
+}
+
+header nav a:hover, 
+footer nav a:hover {
+    border-bottom-color: #FFB3AE;
+}
+
+header nav a.active,
+footer nav a.active {
+    background-color: #7E4E60;
+    color: white;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-right: 12px;
+    background-color: #FE5F55;
+    color: white;
+    font-size: 12px;
+    border-radius: 18px;
+}
+
+.tag:hover {
+    background-color: #FFB3AE;
+}
+
+.tag.btn-dark {
+    background-color: #7E4E60;
+    color: white;
+}
+
+/* Artículos */ 
+section.news article {
+    background-color: #7E4E60;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+section.news article img {
+    border-radius: 12px;
+    width: 100%;
+}
+
+section.news article h3 { 
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+section.news article p.tags span {} 
