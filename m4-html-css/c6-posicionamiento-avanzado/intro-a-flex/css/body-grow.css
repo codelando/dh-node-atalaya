@@ -1,0 +1,33 @@
+body {
+    /* Necesitamos que nuestra página ocupe 
+     * como mínimo el 100% del alto de la pantalla 
+     */
+    min-height: 100vh;
+    margin: 0;
+    
+    /* Vamos a usar flexbox para resolver el problema */
+    display: flex;
+    /* Necesitamos que los elementos vayan uno abajo del otro
+     * en lugar de un al lado del otro
+     */
+    flex-direction: column;
+    
+    font-family: sans-serif;
+}
+
+header,
+footer {
+    background-color: #352D39;
+    color: #FFFCF9;
+    padding: 24px;
+}
+
+main {
+    overflow: auto;
+    padding: 24px;
+
+    /* Necesitamos que el main ocupe todo el espacio disponible */
+    flex-grow: 1;
+    
+    background-color: #B1EDE8;
+}

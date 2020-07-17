@@ -1,0 +1,81 @@
+body { 
+    font-family: sans-serif; 
+    margin-top: 120px;
+}
+
+header,
+footer{
+    padding: 24px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+
+    background-color: #011936;
+    color: #ccc;
+}
+main {
+    padding: 24px;
+}
+
+h2 span {
+    position: relative;
+    padding: 12px;
+    margin-right: 12px;
+
+    /* negativo */
+    /*
+    top: -24px;
+    left: -12px;
+    */
+
+    /* positivo */
+    bottom: 24px;
+    /* right: 12px; */
+
+    background-color: #ED254E;
+}
+
+p.noticia {
+    position: relative;
+}
+
+p.noticia .ver-mas {
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+
+    padding: 12px;
+
+    background-color: #F9DC5C;
+    border-radius: 18px;
+    
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+p.noticia-paga:after {
+    position: absolute;
+    display: none;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    content: "Articulo pago";
+    background-color: rgb(249, 220, 92, .75);
+    text-align: center;
+    padding: 32px;
+}
+
+p.noticia-paga:hover:after {
+    display: block;
+}
+

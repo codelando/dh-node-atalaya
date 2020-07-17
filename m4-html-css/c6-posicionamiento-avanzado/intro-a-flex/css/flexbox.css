@@ -1,0 +1,47 @@
+/* https://coolors.co/ff6978-fffcf9-b1ede8-6d435a-352d39 */
+
+body {
+    background-color: #FFFCF9;
+    font-family: sans-serif;
+    color: #333;
+}
+
+
+.flex {
+    height: 500px;
+    width: 500px;
+
+    display: flex;
+    /* Queremos que lo que no entre pase a la siguiente linea */
+    flex-wrap: wrap;
+
+    /* Valor por defecto */
+    flex-direction: row;
+
+    /* Main axis */
+    justify-content: flex-start;
+
+    /* Cross axis */
+    align-items: flex-start;
+
+    border: solid #FF6978 10px;
+}
+
+.box {
+    background-color: #6D435A;
+    font-size: 24px;
+    line-height: 100px;
+    text-align: center;
+    height: 100px;
+    color: #ccc;
+    width: 30%;
+    margin: 0 1.66% 12px;
+}
+
+.offer {
+    flex-grow: 1;
+    order: -1;
+
+    background-color: #B1EDE8;
+    color: #333;
+}
