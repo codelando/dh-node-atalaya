@@ -15,3 +15,19 @@ flex-grow: #; /* 0 ~ 1 */
 align-self: 
 
 # Position
+
+position: static / relative / absolute / fixed;
+left:
+right:
+top:
+bottom:
+
+# Z-index
+
+z-index: #;
+
+# Ejemplos
+
+overlay
+paralax
+viewport / body

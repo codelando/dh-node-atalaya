@@ -1,0 +1,218 @@
+/* https://coolors.co/5c2751-6457a6-9dacff-76e5fc-4bc0d9 */
+
+/* Estilos generales - Para todo el sitio */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #666;
+    background-color: #eee;
+}
+
+h1,
+h2,
+h3 {
+    color: black;
+    margin-top: 0;
+}
+
+
+h1,
+h3 {
+    font-weight: normal;
+}
+
+i {
+    margin: 6px;
+    color: #666;
+    font-size: 18px;
+}
+
+.profile-img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+/* Header */ 
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    
+    background-color: white;
+}
+
+header i { margin: 6px 12px }
+
+/* Menú de acciones */
+
+header .start {
+    display: flex;
+    align-items: center;
+}
+
+header .start .logo {
+    font-weight: bold;
+}
+
+header .start .logo i {
+    color: tomato;
+    margin-right: 6px;
+}
+
+/* Buscador del menú */
+
+header .center {
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+header .center input,
+header .center button {
+    border-radius: 0;
+    border: 1px solid #ccc;
+}
+
+header .center input {
+    width: 80%;
+    max-width: 500px;
+    padding: 6px 12px;
+}
+
+header .center button {
+    padding: 6px 24px;
+}
+
+header .center i {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Menú de usuario */
+
+header .end {
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    background-color: #eee;
+}
+
+/* Contenido principal */
+
+main {
+    width: 70%;
+    margin: 24px;
+}
+
+.video-player {
+    /*
+    overflow: hidden;
+    height: 0;
+    padding-top: 56.25%;
+    background-color: black;
+    */
+}
+
+    .video-player img { width: 100%; }
+
+.main-video .video-desc {
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-video .video-desc h1 {
+    font-size: 20px;
+}
+
+
+/* Contenido secundario */
+
+aside {
+    margin: 24px 0;
+    width: 30%;
+}
+
+.video-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.video-container.featured-video {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.video-container .video-img { 
+    position: relative; 
+    width: 50%;
+    margin-right: 12px;
+}
+
+.video-img img {
+    width: 100%;
+}
+    .video-play {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        
+        left: calc(50% - 18px);
+        top: calc(50% - 18px);
+        
+        line-height: 36px;
+        text-align: center;
+        
+    }
+        .video-play i {
+            font-size: 24px;
+            color: white;
+        }
+    .video-actions {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 6px;
+        
+        flex-direction: column;
+        
+    }
+        .video-actions i {
+            width: 30px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 3px;
+            color: white;
+            
+            text-align: center;
+            line-height: 30px;
+        }
+    .video-container:hover .video-actions {
+        display: flex;
+    }
+
+
+.video-container .video-desc { 
+    width: 50%;
+}
+
+.video-desc h2,
+.video-desc p { 
+    font-size: 12px;
+}
