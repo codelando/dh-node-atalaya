@@ -1,0 +1,58 @@
+/* https://coolors.co/fbf5f3-e28413-000022-de3c4b-c42847 */
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    border: 5px solid whitesmoke;
+    margin: 2em 0;
+}
+
+body {
+    margin: 0;
+    background-color: #FBF5F3;
+    font-family: sans-serif;
+}
+
+.product {
+   padding: 1rem;
+   margin-bottom: 1rem;
+
+    background-color: #000022;
+    color: whitesmoke;
+
+    border-radius: .5rem;
+}
+
+@media all and (min-width: 600px) {
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -.5rem;
+        margin-right: -.5rem;
+    }
+    
+    .product-container .product {
+        margin-left: .5rem;
+        margin-right: .5rem;
+        width: calc(50% - 1rem);
+    }
+}
+
+@media all and (min-width: 1024px) {   
+    .product-container .product {
+        margin-left: .5rem;
+        margin-right: .5rem;
+        width: calc(33.333333% - 1rem);
+    }
+}
+
+
+/* Estilos para impresión */
+@media print {
+    header { display: none; }
+}
+
+

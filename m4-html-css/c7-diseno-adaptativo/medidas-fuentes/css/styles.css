@@ -1,0 +1,48 @@
+/* https://coolors.co/fbf5f3-e28413-000022-de3c4b-c42847 */
+
+* { box-sizing: border-box; }
+
+hr {
+    border: 5px solid whitesmoke;
+    margin: 2em 0;
+}
+
+html {
+    font-size: 32px;
+}
+
+body {
+    background-color: #000022;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.titular-px {
+    font-size: 16px;
+}
+
+/* Relativo al padre, por lo general es difícil de manejar */
+.titular-em {
+    font-size: 2em;
+}
+
+/* Relativo al tamaño de fuente del HTML */
+.titular-rem {
+    font-size: 1rem; /* 16px */
+}
+
+
+.login {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+
+    padding: .5rem;
+
+    font-size: 1rem;
+    text-align: center;
+    background-color: #E28413;
+
+    border-radius: .5rem;
+}

@@ -1,0 +1,55 @@
+/* https://coolors.co/fbf5f3-e28413-000022-de3c4b-c42847 */
+
+* {
+    box-sizing: border-box;
+}
+
+hr {
+    border: 5px solid whitesmoke;
+    margin: 2em 0;
+}
+
+body {
+    margin: 24px;
+
+    /* margin: 0; */
+    background-color: #000022;
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+
+.box {
+    height: 200px;
+    margin-bottom: 25px;
+
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+    background-color: #C42847;
+}
+
+.inner-box {
+    height: 150px;
+    padding: 10px;
+
+    background-color: #E28413;
+}
+
+
+.box-px { width: 800px; }
+.box-porcentage { width: 50%; }
+.box-vw { width: 50vw; }
+
+/* Como podemos mezclar unidades absolutas con relativas */
+.login {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+
+    padding: 12px;
+
+    text-align: center;
+    background-color: #E28413;
+
+    border-radius: 6px;
+}
