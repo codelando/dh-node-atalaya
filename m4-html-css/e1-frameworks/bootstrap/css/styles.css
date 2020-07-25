@@ -1,0 +1,41 @@
+/* Agregamos a bootstrap los estilos que necesitemos cambiar */
+
+/* Que nuestro main ocupe todo el espacio disponible por ejemplo*/
+body { 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {}
+
+main { flex-grow: 1;}
+
+main .jumbotron {
+    background-color: white;
+}
+
+
+/* Si queremos estilar todas las columnas */
+.example [class^="col-"],
+.example .col {
+    background-color: #8F8389;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+}
+
+/* Lista de productos */
+.product-list {
+    padding: 2rem 1rem;
+    background-color: #E6EFE9;
+}
+
+/* Por cada productos */
+.product {
+    /* Este es el fix del que hablaba, 3 minutos de búsqueda de Google después */
+    /* https://stackoverflow.com/questions/36430816/bootstrap-4-card-deck-with-number-of-columns-based-on-viewport */ 
+    display: flex;
+    flex:1 0 auto;
+    
+    margin-bottom: 1rem; 
+}
