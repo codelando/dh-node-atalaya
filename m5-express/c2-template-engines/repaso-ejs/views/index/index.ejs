@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h2>Temas de hoy</h2>
+        <script>console.log('Desde el HTML')</script>
+        <ol>
+            <% items.forEach(item => { %>
+                <% console.log('Desde el EJS') %>
+                <li><%= item %></li>
+            <% }); %> 
+        </ol>
+    </main>
+</body>
+</html>
