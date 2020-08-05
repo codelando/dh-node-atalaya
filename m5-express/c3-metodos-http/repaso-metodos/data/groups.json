@@ -1,0 +1,178 @@
+[
+    {
+        "id": 1,
+        "name": "Seis Pimientas",
+        "repository": "https://github.com/Random003/grupo_1_6pimientas",
+        "students": [
+            { 
+                "name": "Valdes, Gaspar"
+            },
+            { 
+                "name": "Pablo Mealla, Juan"
+            },
+            { 
+                "name": "Rufino, Luis"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Vaporizador",
+        "repository": "https://github.com/BSantiago92/grupo_2_vaporizador",
+        "students": [
+            { 
+                "name": "Bottino, Santiago"
+            },
+            { 
+                "name": "Cami, Bruno"
+            },
+            { 
+                "name": "Chiappello, Darío"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Baggu",
+        "repository": "https://github.com/TiagoAltstadt/grupo_3_Baggu",
+        "students": [
+            { 
+                "name": "Rios, Alejandro"
+            },
+            { 
+                "name": "Altstadt, Tiago"
+            },
+            { 
+                "name": "Giaccaglia, Marcelo"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Rockolla",
+        "repository": "https://github.com/danielaDalessandro/Grupo_4_Rockolla",
+        "students": [
+            { 
+                "name": "D'Alessandro, Daniela"
+            },
+            { 
+                "name": "Emmanuel Erbin, Facundo"
+            },
+            { 
+                "name": "Marsiglia, Felipe"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Simpsocks",
+        "repository": "https://github.com/gerisg/grupo-5-simpsocks",
+        "students": [
+            { 
+                "name": "Langlois, Martin"
+            },
+            { 
+                "name": "Gallardo, Gerardo"
+            },
+            { 
+                "name": "Ruth Malbran, Valeria"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Thunder Shoes",
+        "repository": "https://github.com/mar156/grupo_6_ThunderShoes",
+        "students": [
+            { 
+                "name": "Gonzalez, Adriana Elizabeth"
+            },
+            { 
+                "name": "Vallarella, Stefano"
+            },
+            { 
+                "name": "Vargas, Mariela"
+            },
+            { 
+                "name": "Vieira, Matias"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Distribuidora saludable",
+        "repository": "https://github.com/DamianH08/grupo_7_Distribuidora_Saludable",
+        "students": [
+            { 
+                "name": "Hernandez, Damian"
+            },
+            { 
+                "name": "Isasmendi, Roberto"
+            },
+            { 
+                "name": "Talavera, Brian Geremias"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Workplace Station ",
+        "repository": "https://github.com/sebastianRellihan/grupo_8_workplaceStation",
+        "students": [
+            { 
+                "name": "Brahim Alí, Eduardo"
+            },
+            { 
+                "name": "Gabriel Rellihan, Sebastián"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Chubacha",
+        "repository": "https://github.com/solisjoaquin/grupo_9_Chubacha",
+        "students": [
+            { 
+                "name": "Joaquin Fernando Solis, Jorge"
+            },
+            { 
+                "name": "MARTIN ALMEIDA, CARLOS"
+            },
+            { 
+                "name": "Ogieglo, Eric"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Coffee Shop",
+        "repository": "https://github.com/cristianjova/grupo_10_coffeeShop",
+        "students": [
+            { 
+                "name": "Jovanovich, Cristian"
+            },
+            { 
+                "name": "Galeano, Alejandro"
+            },
+            { 
+                "name": "Niz, Nicolás Agustin"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Middo Naito",
+        "repository": "https://github.com/matiasibarra7/grupo_12_middo-naito",
+        "students": [
+            { 
+                "name": "Barriera, Juan"
+            },
+            { 
+                "name": "Belay, Santiago Sebastián"
+            },
+            { 
+                "name": "Ibarra, Matias"
+            }
+        ]
+    }
+]
