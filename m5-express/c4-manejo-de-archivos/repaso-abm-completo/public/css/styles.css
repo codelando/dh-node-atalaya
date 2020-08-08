@@ -43,6 +43,9 @@ a {
     color: #333;
 }
 
+/* Helpers */
+
+.is-rounded { border-radius: 50%; }
 
 /* Contenedores */
 
@@ -199,8 +202,8 @@ select { width: 100%; }
     }
 
     .card-left figure {
-        height: 96px;
-        width: 96px;
+        height: 120px;
+        width: 120px;
         margin: 0;
 
         overflow: hidden;

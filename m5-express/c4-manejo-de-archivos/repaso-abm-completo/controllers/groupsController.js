@@ -1,4 +1,9 @@
-const groupsModel = require('../database/groupsModel');
+const fs = require('fs');
+const path = require('path');
+const jsonTable = require('../database/jsonTable');
+
+const groupsModel = jsonTable('groups');
+const categoriesModel = jsonTable('categories');
 
 module.exports = {
     index: (req, res) => {
@@ -12,7 +17,9 @@ module.exports = {
         res.render('groups/index',  { groups });
     },
     create: (req, res) => {
-        res.render('groups/create');
+        let categories = categoriesModel.all();
+
+        res.render('groups/create', { categories });
     },
     store: (req, res) => {
 
@@ -22,31 +29,40 @@ module.exports = {
         // 3. agrego el nuevo grupo a los existentes
         // 4. guardado el nuevo listado en el archivo JSON
 
-        let group = {
-            name: req.body.name,
-            description:req.body.description,
-            repository:req.body.repository,
-            image: null
+        let group = req.body;
+        group.image = 'default.png';
+
+        if (req.file) {
+            group.image = req.file.filename;
+        } else if (req.body.oldImage) {
+            group.image = req.body.oldImage;
         }
+
+        delete group.oldImage;
 
         groupId = groupsModel.create(group);
 
-        res.redirect('/groups/' + groupId)
+        res.redirect('/groups/' + groupId);
     },
     edit: (req, res) => {
         let group = groupsModel.find(req.params.id)
+        let categories = categoriesModel.all();
 
-        res.render('groups/edit', { group });
+
+        res.render('groups/edit', { group, categories });
     },
     update: (req, res) => {
+        let group = req.body;
 
-        let group = {
-            id: req.params.id,
-            name: req.body.name,
-            description:req.body.description,
-            repository:req.body.repository,
-            image: null
+        group.id = req.params.id;
+        
+        if (req.file) {
+            group.image = req.file.filename;
+        } else if (req.body.oldImage) {
+            group.image = req.body.oldImage;
         }
+
+        delete group.oldImage;
 
         groupId = groupsModel.update(group);
 
@@ -62,16 +78,20 @@ module.exports = {
         // 3. Enviarlo a la vista
         
         let group = groupsModel.find(req.params.id);
+        group.category = categoriesModel.find(group.categoryId);
 
         res.render('groups/detail', { group });
     },
     destroy: (req, res) => {
 
-        // Traigo todos los grupos
+        let group = groupsModel.find(req.params.id);
+        let imagePath = path.join(__dirname, '../public/img/groups/' + group.image);
         
-        // Elimino el grupo
+        groupsModel.delete(req.params.id);
 
-        // Guardado el nuevo listado en el archivo JSON
+        if (fs.existsSync(imagePath)) {
+            fs.unlinkSync(imagePath)
+        }
 
         res.redirect('/groups')
     },
