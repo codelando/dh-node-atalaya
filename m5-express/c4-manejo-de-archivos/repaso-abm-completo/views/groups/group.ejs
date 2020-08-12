@@ -5,7 +5,9 @@
     </div>
     <div class="card-content">
         <h3><%= group.name %></h3>
-        <p>Categoría: <%= group.category.name %></p>
+        <% if (group.category) { %>
+            <p>Categoría: <%= group.category.name %></p>
+        <%} %>
         <p><a href="<%= group.repository %>" target="_blank">Repositorio</a></p>
         <div>
             <a class="button" href="/groups/<%= group.id %>">Ver detalle</a>
