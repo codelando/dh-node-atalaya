@@ -119,11 +119,9 @@ textarea,
 select,
 button,
 .button {
-    padding: var(--default-padding);
     border: 1px solid var(--light);
+    padding: var(--default-padding);
     background-color: var(--white);
-    border-radius: var(--default-radius);
-    font-size: 1rem;
 }
 
 input.is-success,
@@ -156,7 +154,7 @@ button.is-danger,
 
 .buttons .button { margin-right: var(--default-margin);}
 
-input,
+input:not([type='checkbox']):not([type='radio']),
 textarea,
 select { width: 100%; }
 

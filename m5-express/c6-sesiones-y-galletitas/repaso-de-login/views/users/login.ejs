@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body class="login">
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered is-vcentered">
+                    <div class="column is-6">
+                        <form action="/users/login" method="POST">
+                            <h2>Ingresa tus datos</h2>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" id="email" class="<%= locals.errors && errors.email ? 'is-danger' : '' %> " value="<%= locals.user && user.email %>">
+                                </div>
+                                <% if(locals.errors && errors.email) { %>
+                                    <p class="feedback is-danger"><%= errors.email.msg %> </p>
+                                <% } %> 
+                            </div>
+
+                            <div class="field">
+                                <label for="password">Contraseña</label>
+                                <div class="control">
+                                    <input type="password" name="password" id="password" class="<%= locals.errors && errors.password ? 'is-danger' : '' %>">
+                                </div>
+                                <% if(locals.errors && errors.password) { %>
+                                    <p class="feedback is-danger"><%= errors.password.msg %> </p>
+                                <% } %> 
+                            </div>
+
+                            <div class="field">
+                                <label for="remember">Recordar mis datos</label>
+                                <div class="control">
+                                    <input type="checkbox" name="remember" id="remember">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Ingresar</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
