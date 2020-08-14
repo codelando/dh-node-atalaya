@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
-//const maintenanceMode = require('./middlewares/maintenance');
+const session = require('express-session');
+const auth = require('./middlewares/auth');
 
 // Configuración
 // Las vistas tienen extension .ejs
@@ -11,6 +12,14 @@ app.set('view engine', 'ejs');
 // Template Engines
 app.use(express.static('public'));
 //app.use(maintenanceMode);
+
+// Sessiones y galletitas
+app.use(session({
+    secret: 'Admin de grupos',
+    resave: false, // no vuelve a guardar si no hay cambios
+    saveUninitialized: true, // guarda sessiones aunque todavía no haya datos
+}));
+app.use(auth);
 
 // Formularios
 app.use(express.urlencoded({ extended: false })); // Arma el objeto body

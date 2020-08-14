@@ -1,11 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/groupsController');
-const m1 = require('../middlewares/m1');
-const m2 = require('../middlewares/m2');
-const m3 = require('../middlewares/m3');
-const maintenanceMode = require('../middlewares/maintenance');
 const validate = require('../validators/groups');
+
+const userRoute = require('../middlewares/userRoute');
+const adminRoute = require('../middlewares/adminRoute');
 
 const path = require('path');
 const multer = require('multer');
@@ -19,33 +18,30 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Para aplicar los middlewares a todo el archivo
-// router.use(m1);
-// router.use(m2);
-// router.use(m3);
+// router.use(userRoute);
 
 // Todos los grupos
-router.get('/', m1, m2, m3, controller.index);
+router.get('/', controller.index);
 
 // Formulario de búsqueda
 router.get('/search', validate.searchForm, controller.search);
 
 // Formulario de creación
-router.get('/create' ,controller.create);
+router.get('/create', userRoute, controller.create);
 
 // Procesamiento del formulario de creación
-router.post('/', upload.single('image'), validate.createForm, controller.store);
+router.post('/', userRoute, upload.single('image'), validate.createForm, controller.store);
 
 // Formulario de edición
-router.get('/:id/edit', controller.edit);
+router.get('/:id/edit', userRoute, controller.edit);
 
 // Procesamiento del formulario de edicion
-router.put('/:id', upload.single('image'), controller.update);
+router.put('/:id', userRoute, upload.single('image'), controller.update);
 
 // Detalle de un grupo - Ojo con el parámetro
 router.get('/:id', controller.show);
 
 // Procesamiento del formulario de edicion
-router.delete('/:id', controller.destroy);
+router.delete('/:id', userRoute, adminRoute, controller.destroy);
 
 module.exports = router;

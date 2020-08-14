@@ -229,6 +229,21 @@ header {
     padding: 1rem;
 }
 
+header nav {
+    display: flex;
+}
+
+.nav-start {
+    align-self: flex-start;
+}
+
+.nav-end {
+    align-self: flex-end;
+    display: flex;
+    justify-items: flex-end; 
+}
+
+
 header nav a {
     display: inline-block;
     background-color: #7AE7C7;
