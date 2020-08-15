@@ -111,7 +111,7 @@ module.exports = {
     },
     search: (req, res) => {
         
-        let search;
+        let search = req.query.search;
         let groups = [];
 
         // Traigo todos los grupos

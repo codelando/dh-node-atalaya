@@ -28,6 +28,7 @@ Viven en el navegador del visitante. Son inseguras.
 
 `app.use(cookieParser())`
 
+`// Recordamos al usuario por 3 meses         msegs  segs  mins  hs   días`
 `res.cookie('rememberToken', token, { maxAge: 1000 * 60  * 60 *  24 * 90 });`
 
 `res.clearCookie('rememberToken');`

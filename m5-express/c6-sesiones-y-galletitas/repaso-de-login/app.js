@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const auth = require('./middlewares/auth');
 
 // Configuración
@@ -19,6 +21,8 @@ app.use(session({
     resave: false, // no vuelve a guardar si no hay cambios
     saveUninitialized: true, // guarda sessiones aunque todavía no haya datos
 }));
+app.use(cookieParser());
+
 app.use(auth);
 
 // Formularios
@@ -36,4 +40,4 @@ app.use('/users', usersRoutes);
 
 
 // Servidor
-app.listen(3000, () => { console.log('Servidor funcionando en el puerto 3000.') })
+app.listen(3001, () => { console.log('Servidor funcionando en el puerto 3000.') })
