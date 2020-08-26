@@ -31,6 +31,28 @@ Si no especificamos, tenemos que insertar un valor para todos los campos. En el 
 
 `SELECT first_name, last_name, rating FROM actors WHERE first_name LIKE 'L%';`
 
+Mostrar el título de las películas que salieron entre el 2004 y 2008.
+
+`SELECT title, release_date FROM movies WHERE release_date BETWEEN '2004-01-01' AND '2008-12-31';`
+
+`SELECT title, release_date FROM movies WHERE YEAR(release_date) BETWEEN 2004 AND 2008;`
+
+## IN
+
+```
+SELECT 
+	title,
+    awards
+FROM 
+	movies 
+WHERE
+	rating > 5
+    AND awards IN (2, 5, 11)
+    AND YEAR(release_date) BETWEEN 1988 AND 2009
+ORDER BY
+	awards;
+```
+
 ## Limit y offset
 
 Normalmente lo usamos para paginado o bien para limitar la cantidad de resultados que vamos a traernos.
