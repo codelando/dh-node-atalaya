@@ -1,5 +1,6 @@
 # Promesas
 
+```
 promesa()
     .then(resutado => {
         // El valor retornado pasa a la siguiente promesa
@@ -11,6 +12,7 @@ promesa()
     .catch(error => {
 
     })
+```
 
 // ¿readFile?
 
