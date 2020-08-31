@@ -53,6 +53,12 @@ Luego deberemos configurar nuestros datos de acceso a la base.
 
 ## Creación de modelos
 
+Los modelos pueden crearse utilizando Sequelize CLI
+
+`sequelize model:generate --name movie --attributes title:string,rating:decimal,awards:integer`
+
+Se pueden general data a través de [Mokaroo](https://www.mockaroo.com/)
+
 ## Consultas
 
 ### findAll()
@@ -90,6 +96,7 @@ movie.findAll({
 })
 ```
 
+```
 movie.findAll({
     attributes: ['foo', 'bar'],
     where: { title: { [Op.like] : `%${req.query.q}%` } },
@@ -118,15 +125,15 @@ https://sequelize.org/master/class/lib/model.js~Model.html#static-method-findAnd
 
 ### Links útiles
 
-Seleccionando campos específicos
+**Seleccionando campos específicos**
 
 https://sequelize.org/master/manual/model-querying-basics.html#specifying-attributes-for-select-queries
 
-Ordenando
+**Ordenando**
 
 https://sequelize.org/master/manual/model-querying-basics.html#ordering
 
-Paginando
+**Paginando**
 
 https://sequelize.org/master/manual/model-querying-basics.html#limits-and-pagination
 
