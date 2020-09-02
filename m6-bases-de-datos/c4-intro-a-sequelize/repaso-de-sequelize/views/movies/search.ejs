@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de películas</title>
+</head>
+<body>
+    <main>
+        <h1>Buscador de películas</h1>
+        <div>
+            <form>
+                <input type="text" name="title">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <div>
+            <p>Total de Resultados: <%= totalResults %> </p>
+            <p>Total de páginas: <%= totalPages %> </p>
+            <p>Página acutal: <%= currentPage %> </p>
+            
+            <p>
+                <% for(let p = 1; p <= totalPages; p++) { 
+                    if(currentPage == p) { %>
+                    <strong><%= p %></strong>      
+                <%    } else { %>
+                    <a href="/movies/search?title=<%= searchTitle %>&page=<%= p %>&perPage=<%= perPage %>"><%= p %></a>
+
+                <%    } 
+                } %>
+            </p>
+        </div>
+        <% movies.forEach(movie => { %>
+            <article>
+                <h2><%= movie.title %></h2>
+            </article>
+            <hr>
+        <% }) %>
+    </main>
+</body>
+</html>

@@ -14,20 +14,18 @@ promesa()
     })
 ```
 
-// ¿readFile?
-
 # Sequelize
 
 Object Relational Mapper --> transforma la información de los pedidos a objetos
 
 ## Instalación
 
-`npm i sequelize mysql2` --> Paquetes de Sequelize y soporte para Mysql
+`npm i sequelize mysql2` --> Paquetes de **Sequelize** y soporte para **Mysql**
 `npm i sequelize-cli -g` --> Herramientas de consola para Sequelize
 
 ### .sequelizerc
 
-// Es el archivo que le dirá al comando `sequelize init` dónde queremos los archivos que genera
+Es el archivo que le dirá al comando `sequelize init` dónde queremos los archivos que genera
 
 ```
 const path = require('path')
@@ -40,16 +38,15 @@ module.exports = {
 }
 ```
 
-// Ahora si, ejecutar el comando para inicializar Sequelize
+Ahora si, ejecutar el comando para inicializar Sequelize
 
 `sequelize init`
 
 ### database/config/config.js
 
-// Aquí será necesario que le agregemos `module.exports = ` al comienzo del archivo.
+Aquí será necesario que le agregemos `module.exports = ` al comienzo del archivo.
 
 Luego deberemos configurar nuestros datos de acceso a la base.
-
 
 ## Creación de modelos
 
@@ -57,7 +54,7 @@ Los modelos pueden crearse utilizando Sequelize CLI
 
 `sequelize model:generate --name movie --attributes title:string,rating:decimal,awards:integer`
 
-Se pueden general data a través de [Mokaroo](https://www.mockaroo.com/)
+Luego pueden generar registros usando [Mokaroo](https://www.mockaroo.com/) de la misma manera que lo hicieron para JSON.
 
 ## Consultas
 
@@ -67,7 +64,7 @@ Se pueden general data a través de [Mokaroo](https://www.mockaroo.com/)
 model.findAll()
     .then(results => {
         // Atajamos si no hay resultados
-        if (results) {
+        if (results.length) {
             // Hay resultados
         } else {
             // No hay resultados
@@ -95,6 +92,8 @@ movie.findAll({
     where: { title: { [Op.like] : `%${req.query.q}%` } }
 })
 ```
+
+Es porque Sequelize soporta varios tipos de base de datos y los operadores cambian entre ellas.
 
 ```
 movie.findAll({
@@ -136,4 +135,3 @@ https://sequelize.org/master/manual/model-querying-basics.html#ordering
 **Paginando**
 
 https://sequelize.org/master/manual/model-querying-basics.html#limits-and-pagination
-

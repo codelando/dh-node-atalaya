@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de películas</title>
+</head>
+<body>
+    <main>
+        <h1>Listado de películas</h1>
+        <% movies.forEach(movie => { %>
+            <article>
+                <h2><%= movie.title %></h2>
+            </article>
+            <hr>
+        <% }) %>
+    </main>
+</body>
+</html>
