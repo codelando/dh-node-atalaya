@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Nuevo grupo</h1>
+                        <% locals.errors && console.log(errors); %>
+
+                        <form action="/groups" method="POST" enctype="multipart/form-data">
+
+                            <div class="field">
+                                <label for="name">Nombre</label>
+                                <div class="control">
+                                    <input class="<%= locals.errors && errors.name ? 'is-danger' : '' %>" type="text" name="name" value="<%= locals.group ? group.name : '' %>">
+                                </div>
+                                <p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>">
+                                    <%= locals.errors && errors.name ? errors.name.msg : '' %>
+                                </p>
+                            </div>
+                            
+                            <div class="field">
+                                <label for="categoryId">Categoría</label>
+                                <div class="control">
+                                    <select class="<%= locals.errors && errors.categoryId ? 'is-danger' : '' %>" name="categoryId" id="categoryId">
+                                        <option value="">Selecciona una categoría</option>
+                                        <% categories.forEach(category => { %>
+                                           <option 
+                                            value="<%= category.id %>"  
+                                            <%= locals.group && group.categoryId == category.id ? "selected": "";  %> >
+                                                <%= category.name %>
+                                            </option> 
+                                        <% });  %> 
+                                    </select>
+                                </div>
+                                <p class="feedback <%= locals.errors && errors.categoryId ? 'is-danger' : '' %>"><%= locals.errors && errors.categoryId ? errors.categoryId.msg : '' %></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="name">Descripción</label>
+                                <div class="control">
+                                    <textarea class="<%= locals.errors && errors.description ? 'is-danger' : '' %>" name="description"><%= locals.group ? group.description : '' %></textarea>
+                                </div>
+                                <p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>"><%= locals.errors && errors.description ? errors.description.msg : '' %></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="name">Repositorio</label>
+                                <div class="control">
+                                    <input class="<%= locals.errors && errors.repository ? 'is-danger' : '' %>" type="text" name="repository" value="<%= locals.group ? group.repository : '' %>">
+                                </div>
+                                <p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>"><%= locals.errors && errors.repository ? errors.repository.msg : '' %></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="name">Imagen</label>
+                                <div class="control">
+                                    <input class="<%= locals.errors && errors.image ? 'is-danger' : '' %>" type="file" name="image">
+                                </div>
+                                <p class="feedback <%= locals.errors && errors.name ? 'is-danger' : '' %>"><%= locals.errors && errors.image ? errors.image.msg : '' %></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Crear grupo</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

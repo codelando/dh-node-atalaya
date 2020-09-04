@@ -1,0 +1,17 @@
+<header>
+    <nav>
+        <div class="nav-start">
+            <a href="/groups">Listado de grupos</a>
+            <a href="/groups/create">Crear un grupo</a>
+            <a href="/groups/search">Búsqueda</a>
+        </div>
+        <div class="nav-end">
+            <% if (locals.user) { %> 
+                <a href="/users/profile"><%= user.first_name %></a>
+                <a href="/users/logout">Logout</a>
+            <% } else { %>
+                <a href="/users/login">Login</a>
+            <% } %>
+        </div>
+    </nav>
+</header>

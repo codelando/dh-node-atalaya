@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Editar grupo</h1>
+                        <img class="is-rounded" src="/img/groups/<%= group.image ? group.image : 'default.png' %>" alt="">
+                        <form action="/groups/<%= group && group.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                            
+                            <input type="hidden" name="oldImage" value="<%= group && group.image %>">
+                            
+                            <div class="field">
+                                <label for="name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="name" value="<%= group && group.name %>">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="categoryId">Category</label>
+                                <div class="control">
+                                    <select name="categoryId" id="categoryId">
+                                        <% categories.forEach(category => { %>
+                                           <option value="<%= category.id %>" <%= group.categoryId == category.id ? 'selected': null %>><%= category.name %></option> 
+                                        <% });  %> 
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="name">Descripción</label>
+                                <div class="control">
+                                    <textarea name="description"><%= group && group.description %></textarea>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="name">Repositorio</label>
+                                <div class="control">
+                                    <input type="text" name="repository" value="<%= group && group.repository %>">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+
+                            <div class="field">
+                                <label for="name">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Editar grupo</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
