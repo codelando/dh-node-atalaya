@@ -1,0 +1,14 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+main p mark.important {
+    font-size: 2rem;
+}
+
+header nav a.active {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}

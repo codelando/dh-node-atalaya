@@ -1,0 +1,151 @@
+/* https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee;
+}
+
+a { 
+    text-decoration: none; 
+    color: #333;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Sistema de grillas */
+
+.columns {
+    margin-left: calc(-1 * 1rem);
+    margin-right: calc(-1 * 1rem);
+    margin-top: calc(-1 * 1rem);
+}
+
+.columns.is-multiline { flex-wrap: wrap; }
+.columns.is-centered { justify-content: center; }
+.columns.is-vcentered { align-items: center; }
+
+.column {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 1rem  ;
+}
+
+/* Columnas de tablet para arriba */
+
+@media (min-width: 769px) {
+    .columns { display: flex; }
+
+    .column.is-1 { flex: none; width: 8.33333% }
+    .column.is-2 { flex: none; width: 16.66667% }
+    .column.is-3 { flex: none; width: 25% }
+    .column.is-4 { flex: none; width: 33.33333% }
+    .column.is-5 { flex: none; width: 41.66667% }
+    .column.is-6 { flex: none; width: 50% }
+    .column.is-7 { flex: none; width: 58.33333% }
+    .column.is-8 { flex: none; width: 66.66667% }
+    .column.is-9 { flex: none; width: 75% }
+    .column.is-10 { flex: none; width: 83.33333% }
+    .column.is-11 { flex: none; width: 91.66667% }
+    .column.is-12 { flex: none; width: 100% }
+}
+
+/* Formularios */
+
+input,
+textarea,
+select,
+button,
+.button {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.button { 
+    display: inline-block; 
+    cursor: pointer;
+}
+
+.button.primary {
+    color: white;
+    background-color: #264653;
+}
+
+.buttons { 
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.buttons .button { margin-right: .5rem;}
+
+input:not([type='checkbox']):not([type='radio']),
+textarea,
+select { width: 100%; }
+
+.field:not(:last-child) { margin-bottom: 1rem;}
+
+.field label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+/* Bloques principales */
+
+header {
+    background-color: #264653;
+    color: white;
+    padding: 24px;
+}
+
+header .logo {
+    background-color: #E76F51;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+
+header .logo,
+header a {
+    display: inline-block;
+    color: white;
+    margin-right: 12px;
+    padding: 1em;
+}
+
+header a:hover {
+    background-color: #2A9D8F;
+}
+
+header a.active {
+    background-color: #F4A261;
+    color: #333;
+}
+
+main {
+    padding: 24px;
+}
+
+/* Página principal */
+
+.bio img {
+    float: right;
+}
+
+/* Mis trabajos */
+
+.work img {
+    width: 100%;
+}
+
+.skill img {
+    width: 100%;
+}
