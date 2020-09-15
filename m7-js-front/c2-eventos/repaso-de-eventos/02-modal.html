@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El modal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/modal.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">🏠</a>
+        <h1>El modal</h1>
+    </header>
+    <main>
+        <section class="challenge">
+            <h2>Desafío</h2>
+            <p>Deberán hacer funcionar el modal teniendo en cuenta lo siguiente:</p>
+            <p>
+                <ol>
+                    <li>Todo el estilo CSS ya está programado</li>
+                    <li>El modal por defecto está oculto</li>
+                    <li>El modal se activa agregando la clase <code>is-active</code></li>
+                    <li>El modal se debe activar al hacer click en el botón</li>
+                    <li>El modal se debe desactivar al hacer clien en el botón de cierre o en el fondo del modal (la parte oscura)</li>
+                </ol>
+            </p>
+        </section>
+        <section class="code">
+            <a class="button is-primary modal-button" data-target="modal">Iniciar modal</a>
+            <div class="modal" id="modal">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <h3>¡Felicitaciones!</h3>
+                    <img src="img/yay.gif" class="w-100" alt="Felicitaciones">
+                    <p>El modal se muestra... pero... ¿se cierra también?</p>
+                </div>
+                <button class="modal-close" aria-label="close"></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

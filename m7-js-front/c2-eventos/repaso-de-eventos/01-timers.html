@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El modal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/timers.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">🏠</a>
+        <h1>Los timers</h1>
+    </header>
+    <main>
+        <section class="challenge">
+            <h2>Desafío</h2>
+            <p>Deberán hacer que los cuadros cambien de color teniendo en cuenta lo siguiente:</p>
+            <p>
+                <ol>
+                    <li>Todo el estilo CSS ya está programado</li>
+                    <li>Las instrucciones estarán cada ejercicio</li>
+                </ol>
+            </p>
+        </section>
+        <section class="code">
+            <h2>Tomar el color y aplicarlo al box cada 3 segundos</h2>
+            <div class="valign-center">
+                <div class="color-box" id="color-box-1"></div>
+                <input type="color" class="color-picker" id="color-picker-1" data-target="color-box-1">
+            </div>
+        </section>
+        <section class="code">
+            <h2>Tomar el color y aplicarlo al box cada 3 segundos</h2>
+            <div class="valign-center">
+                <div class="color-box" id="color-box-2"></div>
+                <input type="color" class="color-picker" id="color-picker-2" data-target="color-box-2">
+                <div class="buttons">
+                    <a class="button is-primary modal-button" data-target="color-picker-2">Iniciar</a>
+                    <a class="button is-primary modal-button" data-target="color-picker-2">Detener</a>
+                </div>
+            </div>
+        </section>
+        <section class="code">
+            <h2>Tomar el color y aplicarlo al box a los 5 segundos de hacer click</h2>
+            <div class="valign-center">
+                <div class="color-box" id="color-box-3"></div>
+                <input type="color" class="color-picker" id="color-picker-3">
+                <div class="buttons">
+
+                    <a class="button is-primary modal-button" data-target="color-picker-3">Cambiar color</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

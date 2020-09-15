@@ -1,0 +1,253 @@
+/* https://coolors.co/f4f1de-e07a5f-3d405b-81b29a-f2cc8f */
+
+:root {
+    --default-margin: 1rem;
+    --default-padding: 1rem;
+    --default-radius: .5rem;
+
+    --primary-color: #3d405b;
+    --secondary-color: #E07A5F;
+
+    --success-color: #81B29A;
+
+    --white-color: #ddd;
+    --black-color: #222;
+}
+
+* { box-sizing: border-box; }
+
+html { 
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+
+/* Helpers */
+
+.w-100 { width: 100%;}
+
+/**/
+
+a { 
+    text-decoration: none; 
+    color: var(--black-color);
+    font-weight: bold;
+}
+
+code {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    border-radius: var(--default-radius);
+    padding: calc(var(--default-padding) / 2);
+    margin-right: calc(var(--default-margin) / 2);
+    margin-left: calc(var(--default-margin) / 2);
+}
+
+ol {
+    counter-reset: my-counter;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol li {
+    counter-increment: my-counter;
+    margin-bottom: calc(var(--default-margin) / 2);
+}
+
+ol li::before {
+    content: counter(my-counter);
+
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 1rem;
+    align-items: center;
+
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+}
+
+/* Formularios */
+
+.form.is-inline { display: inline-block; }
+
+input,
+textarea,
+select {
+    border: 1px solid var(--light);
+    padding: var(--default-padding);
+    background-color: var(--white-color);
+}
+
+button,
+.button {
+    padding: var(--default-padding);
+    color: var(--white-color);
+
+    border: 0;
+    border-radius: var(--default-radius);
+}
+
+input.is-primary,
+textarea.is-primary,
+select.is-primary,
+button.is-primary,
+.button.is-primary { background-color: var(--primary-color);}
+
+.button { 
+    display: inline-block; 
+    cursor: pointer;
+}
+
+.buttons {
+    margin: 0 var(--default-margin);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons .button { margin-right: var(--default-margin);}
+
+input:not([type='checkbox']):not([type='radio']):not([type='color'])    ,
+textarea,
+select { width: 100%; }
+
+.feedback {
+    margin-top: .25rem;
+    font-size: .9rem;
+}
+
+.field:not(:last-child) { margin-bottom: 1rem;}
+
+.field label {
+    display: block;
+    margin-bottom: .25rem;
+}
+
+.feedback.is-success { color: var(--success-color); }
+.feedback.is-warning { color: var(--warning-color); }
+.feedback.is-danger { color: var(--danger-color); }
+
+/* Bloques principales */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    padding: var(--default-padding);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+main {
+    padding: var(--default-padding);
+}
+
+
+.modal {
+    position: fixed;
+    overflow: hidden;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.modal.is-active {
+    display: flex;
+}
+
+.modal-background {
+    background-color: rgba(0,0,0,.85);
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.modal-content {
+    position: relative;
+    overflow: auto;
+    
+    width: 640px;
+    max-height: calc(100vh - 40px);
+    margin: 0 auto;
+
+    padding: var(--default-padding);
+    background-color: var(--white-color);
+    border-radius: var(--default-radius);
+}
+
+.modal-close {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+
+    min-width: 3rem;
+    min-height: 3rem;
+    
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: black;
+    border-radius: 50%;
+}
+
+.modal-close::after {
+    content: '\2715';
+    color: var(--white-color);
+    font-weight: bold;
+}
+
+section.code {
+    margin-top: var(--default-margin);
+    padding-top: var(--default-padding);
+    border-top: 6px dotted var(--black-color);
+}
+
+.color-box {
+    display: inline-block;
+
+    width: 3rem;
+    height: 3rem;
+    
+    background-color: var(--success-color);
+}
+
+input.color-picker {
+    display: inline-block;
+
+    width: 10rem;
+    height: 3rem;
+
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    -webkit-appearance: none;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.valign-center {
+    display: flex;
+    align-items: center;
+}
