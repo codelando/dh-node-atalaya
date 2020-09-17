@@ -18,6 +18,18 @@ Especialmente para el envío del formulario, vamos a querer prevenir que ocurra 
 
 Por defecto los campos de un formulario estarán definidos por su propiedad `name`, lo recomendable es agregarles un `id` con el mismo valor que tenga la propiedad `name`. De esta manera podemos hacer funcionar los **labels** y ademas acceder a cada campo con el método `document.getElementById()`
 
+## Moviéndonos por el DOM
+
+`element.nextElementSibling` → Nos permite acceder al próximo elemento
+
+`element.previousElementSibling` → Nos permite acceder al elemento previo
+
+`element.parentElement` → Nos permite acceder al elemento padre
+
+`element.childNodes[0]` → Nos permite acceder al los elementos hijos
+
+`element.closest('selector');` → Nos permite encontrar el ancestro más cercano (padre, abuelo, etc)
+
 ## Validando
 
 1. Acá vamos a estar usando la propiedad `value` de nuestros campos en la gran mayoría de los casos.
