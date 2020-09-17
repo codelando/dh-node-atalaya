@@ -10,7 +10,7 @@ Nos permite detectar cuando el usuario...
 
 **change** → cambia el valor de un campo
 
-**summit** → envía el formulario
+**sumbit** → envía el formulario
 
 Especialmente para el envío del formulario, vamos a querer prevenir que ocurra en algunos casos con el método `preventDefault()` del evento que estamos capturando.
 
