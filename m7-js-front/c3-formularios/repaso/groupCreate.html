@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/validator.min.js"></script>
         <script src="js/validations.js"></script>
         <title>Listado de grupos</title>
     </head>
@@ -61,10 +62,19 @@
                                 <p class="feedback"></p>
                             </div>
 
+                            
                             <div class="field">
                                 <label for="image">Imagen</label>
                                 <div class="control">
                                     <input type="file" name="image" id="image">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+                            
+                            <div class="field">
+                                <label for="featured">Grupo destacado</label>
+                                <div class="control">
+                                    <input type="checkbox" name="featured" id="featured">
                                 </div>
                                 <p class="feedback"></p>
                             </div>
