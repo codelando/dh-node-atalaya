@@ -14,6 +14,10 @@ Nos permite detectar cuando el usuario...
 
 Especialmente para el envío del formulario, vamos a querer prevenir que ocurra en algunos casos con el método `preventDefault()` del evento que estamos capturando.
 
+## Accediendo a los campos
+
+Por defecto los campos de un formulario estarán definidos por su propiedad `name`, lo recomendable es agregarles un `id` con el mismo valor que tenga la propiedad `name`. De esta manera podemos hacer funcionar los **labels** y ademas acceder a cada campo con el método `document.getElementById()`
+
 ## Validando
 
 1. Acá vamos a estar usando la propiedad `value` de nuestros campos en la gran mayoría de los casos.
@@ -25,6 +29,15 @@ Especialmente para el envío del formulario, vamos a querer prevenir que ocurra 
     - Mostrar los errores
 
 4. Si el elemento está vacío, es que no tenemos errores y podemos enviar el formulario sin problemas.
+
+Si quieren saber más pueden ver [ésta página de Mozilla](https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos)
+
+### Validando si tenemos Node + Express del otro lado
+
+https://express-validator.github.io/docs/
+
+https://github.com/validatorjs/validator.js
+
 
 # Location y history
 

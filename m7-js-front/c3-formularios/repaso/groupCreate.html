@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/validations.js"></script>
+        <title>Listado de grupos</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="nav-start">
+                    <a href="groupCreate.html">Crear un grupo</a>
+                </div>
+            </nav>
+        </header>   
+    <main>
+        <div class="container">
+            <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Nuevo grupo</h1>
+
+                        <form action="success.html" method="POST" enctype="multipart/form-data" id="groupCreateForm">
+
+                            <div class="field">
+                                <label for="name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+                            
+                            <div class="field">
+                                <label for="categoryId">Categoría</label>
+                                <div class="control">
+                                    <select name="categoryId" id="categoryId">
+                                        <option value="">Selecciona una categoría</option>
+                                        <option value="1">E-commerce</option>
+                                        <option value="2">Red social</option> 
+                                        <option value="3">Juego</option> 
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="description">Descripción</label>
+                                <div class="control">
+                                    <textarea name="description" id="description"></textarea>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="repository">Repositorio</label>
+                                <div class="control">
+                                    <input type="text" name="repository" id="repository">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="image">Imagen</label>
+                                <div class="control">
+                                    <input type="file" name="image" id="image">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit">Crear grupo</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
