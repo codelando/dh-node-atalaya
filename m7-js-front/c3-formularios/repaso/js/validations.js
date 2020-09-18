@@ -65,7 +65,6 @@ window.addEventListener('load', function() {
     categoryId.addEventListener('blur', validateCategoryId);
     description.addEventListener('blur', validateDescription);
 
-
     form.addEventListener('submit', function (event) {
 
         validateName();
