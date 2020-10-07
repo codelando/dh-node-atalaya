@@ -20,11 +20,11 @@ DOM <--> Virtual DOM
 
 ## Estructura de archivos
 
-public
-    index.html --> root de la aplicación
-src
-    index.js --> importa el componente principal y renderiza la aplicación
-    app.js --> componente principal, escrito en JSX
+- public
+   - `index.html` --> root de la aplicación
+- src
+   - `index.js` --> importa el componente principal y renderiza la aplicación
+   - `app.js` --> componente principal, escrito en JSX
 
 
 ## Ecosistema
@@ -57,7 +57,7 @@ function NombreDelComponente() {
 
 ## JSX
 
-- Todas las etiquetas hay que cerrarlas, hasta <img/> <br/> y <hr/>
+- Todas las etiquetas hay que cerrarlas, hasta `<img/>` `<br/>` y `<hr/>`
 - `class` pasa a ser `className`
 - La lógica de Javascript va entre llaves `{}`, esto se puede anidar.
 - No se admiten comentarios de HTML `<!-- -->`, los comentarios se escriben así `{/* */}`
