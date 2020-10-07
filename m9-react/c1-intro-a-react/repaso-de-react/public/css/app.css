@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+}
+
+a { text-decoration: none; }
+
+header a,
+footer a {
+    display: inline-block;
+    padding: 1rem;
+}
