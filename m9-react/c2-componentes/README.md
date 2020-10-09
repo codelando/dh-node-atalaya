@@ -86,6 +86,8 @@ Nos permiten indicar el tipo de dato que se espera recibir para esa propiedad. E
     };
 ```
 
+Pueden leer más sobre los PropTypes disponibles [aquí](https://es.reactjs.org/docs/typechecking-with-proptypes.html).
+
 ## Default props
 
 React también nos permite definir valores por defecto para las propiedades, lo hacemos con las `defaultProps`. Estos serán los valores que se asignen en caso de que no llegue la propiedad.
