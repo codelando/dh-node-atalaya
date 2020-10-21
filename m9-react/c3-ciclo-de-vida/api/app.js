@@ -2,7 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
+
+app.use(cors());
 
 app.get('/api/products', (req,res) => {
     let products = fs.readFileSync(path.join(__dirname, 'data/products.json'));
