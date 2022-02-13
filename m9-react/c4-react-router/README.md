@@ -8,6 +8,8 @@ Por esta razón es que no tenemos por defecto un sistema de ruteo como si lo tie
 
 React Router viene a solucionar justamente esto, permitiéndonos construir lo que normalmente se conoce como una SPA (Single Page Application).
 
+Pueden ver la [documentación oficial](https://reactrouter.com/web/guides/quick-start) para más detalle.
+
 ## Instalación e implementación
 
 React Router es un paquete como cualquier otro, para instalarlo seguimos el procedimiento habitual. Claramente para utilizarlo previamente deberíamos una aplicación de React creada y funcionando (`npm init react-app nombre-de-mi-proyecto`).
@@ -177,14 +179,14 @@ import { Route, Switch } from 'react-router-dom';
 const App = () =>
     return (
           <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
             <Route path="/about">
                 <About />
             </Route>
             <Route path="/contact">
                 <Contact />
+            </Route>
+            <Route exact path="/">
+                <Home />
             </Route>
             <Route>
                 <NoMatch />
@@ -195,6 +197,8 @@ const App = () =>
 
 export default Navbar;
 ```
+
+Al igual que en Node, es mejor poner las rutas más generales abajo ('/' por ejemplo) y las más específicas arriba, ya que se iran probando en el orden en el que están.
 
 ### Switch y las rutas anidadas
 
