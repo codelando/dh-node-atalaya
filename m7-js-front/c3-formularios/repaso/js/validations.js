@@ -46,6 +46,10 @@ window.addEventListener('load', function() {
     };
 
     let handleFeedback = function (element, feedback) {
+
+        // En el caso de que el elemento de feedback tenga un ID
+        // let feedbackElement = document.getElementById(element.name + 'Feedback');
+
         let feedbackElement = element.parentElement.nextElementSibling;
 
         if (feedback) {
