@@ -118,7 +118,11 @@ actor.belongsToMany(models.movie, {
 });
 ```
 
-### Links útiles
+### Métodos de relaciones
+
+https://sequelize.org/master/manual/assocs.html#special-methods-mixins-added-to-instances
+
+## Links útiles
 
 Para la clase que viene
 

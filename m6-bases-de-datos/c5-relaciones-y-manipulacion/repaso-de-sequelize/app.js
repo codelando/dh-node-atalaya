@@ -31,10 +31,12 @@ app.use(methodOverride('_method')); // Verifica si existe _method en el queryStr
 
 // Rutas
 const mainRoutes = require('./routes/index');
+const categoriesRoutes = require('./routes/categories');
 const groupsRoutes = require('./routes/groups');
 const usersRoutes = require('./routes/users');
 
 app.use('/', mainRoutes);
+app.use('/categories', categoriesRoutes);
 app.use('/groups', groupsRoutes);
 app.use('/users', usersRoutes);
 

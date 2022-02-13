@@ -35,6 +35,19 @@
                             </div>
 
                             <div class="field">
+                                <label for="tagId">tag</label>
+                                <div class="control">
+                                    <select name="tagId" id="tagId" multiple>
+                                        <% tags.forEach(tag => { %>
+                                           <option value="<%= tag.id %>"
+                                            <%= group.tags.find(tag2 => tag2.id == tag.id) ? 'selected': null %>><%= tag.name %></option> 
+                                        <% });  %> 
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
                                 <label for="name">Descripción</label>
                                 <div class="control">
                                     <textarea name="description"><%= group && group.description %></textarea>

@@ -6,7 +6,8 @@ const { validationResult } = require('express-validator');
 const groupsModel = jsonTable('groups');
 const categoriesModel = jsonTable('categories');
 
-const { group, category } = require('../database/models')
+const { tag, group, category } = require('../database/models');
+const { where } = require('sequelize');
 
 module.exports = {
     index: (req, res) => {
@@ -89,20 +90,23 @@ module.exports = {
         // res.render('groups/edit', { group, categories });
 
         const categories = await category.findAll();
+        const tags = await tag.findAll();
  
-        group.findByPk(req.params.id, { include: 'category' })
+        group.findByPk(req.params.id, { include: [ 'category', 'tags' ] })
         .then(group => {
-            console.log(group);
-            return res.render('groups/edit',  { group, categories });
+            return res.render('groups/edit',  { group, categories, tags });
         })
         .catch(error => {
             console.log(error);
             return res.redirect('/');
         })
     },
-    update: (req, res) => {
-        let updatedGroup = req.body;
+    update: async (req, res) => {
 
+        let tags = await tag.findAll({ where: { id: req.body.tagId }})
+
+        let updatedGroup = req.body;
+        
         // updatedGroup.id = req.params.id;
         
         if (req.file) {
@@ -110,26 +114,33 @@ module.exports = {
         } else if (req.body.oldImage) {
             updatedGroup.image = req.body.oldImage;
         }
-
+        
         delete updatedGroup.oldImage;
-
+        
         // groupId = groupsModel.update(group);
         // res.redirect('/groups/' + groupId)
+        
+        // Va por acá la cosa
+        // https://stackoverflow.com/questions/38524938/sequelize-update-record-and-return-result
 
-        group.update(updatedGroup, { where: { id: req.params.id } })
-            .then(updatedGroup => {
-                return res.redirect('/groups/' + req.params.id);
-            })
+        // Find or create
+        // https://stackoverflow.com/questions/28821812/sequelize-many-to-many-how-to-create-a-new-record-and-update-join-table
 
+        group.update(updatedGroup, { where: { id: req.params.id }, include: 'tags' , returning: true })
+        .then(updatedGroup => {
+            console.log(updatedGroup);
+            // updatedGroup.setTags(tags)
+            return res.redirect('/groups/' + req.params.id);
+        })
+        
     },
     show: (req, res) => {
         
         // let group = groupsModel.find(req.params.id);
         // group.category = categoriesModel.find(group.categoryId);
 
-        group.findByPk(req.params.id, { include: 'category' })
+        group.findByPk(req.params.id, { include: ['category', 'tags'] })
         .then(group => {
-            console.log(group);
             return res.render('groups/detail',  { group });
         })
         .catch(error => {

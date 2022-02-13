@@ -8,6 +8,14 @@
         <% if (group.category) { %>
             <p>Categoría: <%= group.category.name %></p>
         <%} %>
+        <% if (group.tags && group.tags.length) { %>
+            <p>tags:
+
+                <% group.tags.forEach(tag => { %>
+                    <span class="tag"><%= tag.name %></span>
+                <% }); %>
+             </p>
+        <%} %>
         <p><a href="<%= group.repository %>" target="_blank">Repositorio</a></p>
         <div>
             <a class="button" href="/groups/<%= group.id %>">Ver detalle</a>

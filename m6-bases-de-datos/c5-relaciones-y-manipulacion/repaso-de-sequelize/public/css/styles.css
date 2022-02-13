@@ -291,3 +291,10 @@ main {
     width: 100%;
     height: auto;
 }
+
+.tag {
+    display: inline-block;
+    background-color: #4596d3;
+    padding: var(--default-padding);
+    border-radius: var(--default-radius);
+}

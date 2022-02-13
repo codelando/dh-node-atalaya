@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div class="container">
+            <ul>
+                
+                <% categories.forEach(category => { %>
+                    <h2><%= category.name %> (<%= category.groups.length %>)</h2>
+
+                    <% if (category.groups.length) { %>
+                        <% console.log(category.groups) %> 
+                        <% category.groups.forEach(group => { %>
+                            <%- include('../groups/group', { group }) %>
+                        <% }) %>
+                    <% } else { %>
+                        <p>No hay grupos para esa categoría</p>
+                    <% } %> 
+                <% }) %> 
+            </ul>
+        </div>
+    </main>
+</body>
+</html>
