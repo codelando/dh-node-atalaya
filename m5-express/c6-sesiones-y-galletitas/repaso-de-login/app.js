@@ -40,4 +40,4 @@ app.use('/users', usersRoutes);
 
 
 // Servidor
-app.listen(3001, () => { console.log('Servidor funcionando en el puerto 3000.') })
+app.listen(3000, () => { console.log('Servidor funcionando en el puerto 3000.') })
