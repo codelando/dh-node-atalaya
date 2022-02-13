@@ -1,0 +1,9 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+section.example {
+    margin-top: 1rem;
+    border-top: 3px dotted #333;
+}
